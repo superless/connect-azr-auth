@@ -49,9 +49,7 @@ steps:
     inputs: 
       command: pack
       packagesToPack: '**/$(name-project).csproj'       
-      arguments: '--configuration $(BuildConfiguration) /p:Version=$(SemVer)'
-      feedsToUse: 'select'
-      vstsFeed: '$(default-feed)' 
+      arguments: '--configuration $(BuildConfiguration) /p:Version=$(SemVer)' 
       versioningScheme: byEnvVar 
       versionEnvVar: SemVer
 
