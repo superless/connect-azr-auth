@@ -9,7 +9,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using trifenix.connect.interfaces.auth;
 
-namespace trifenix.connect.auth
+namespace trifenix.connect.aad.auth
 {
 
     /// <summary>
