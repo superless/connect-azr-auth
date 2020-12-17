@@ -1,14 +1,3 @@
-# How to add a private azure devops repository.
+# Autenticación en azure para trifenix connect
 
-
-
-```
-dotnet nuget add source "json azure devops package url" -n name_repo_artifact -u anything -p <pat> --store-password-in-clear-text
-
-
-```
-
-scopes: Packaging (read), Packaging (read and write), or Packaging (read, write, and manage).
-
-
-
+Implementación de interface trifenix.connect.interfaces.auth para azure active directory. 
