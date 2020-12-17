@@ -37,7 +37,7 @@ steps:
   - task: DotNetCoreCLI@2
     inputs:
       command: 'restore'
-      projects: '*.csproj'
+      projects: '**/*.csproj'
       feedsToUse: 'select'
       vstsFeed: '$(default-feed)'      
       versioningScheme: byBuildNumber
@@ -49,7 +49,9 @@ steps:
     inputs: 
       command: pack
       packagesToPack: '**/$(name-project).csproj'       
-      arguments: '--configuration $(BuildConfiguration) /p:Version=$(SemVer)' 
+      arguments: '--configuration $(BuildConfiguration) /p:Version=$(SemVer)'
+      feedsToUse: 'select'
+      vstsFeed: '$(default-feed)'  
       versioningScheme: byEnvVar 
       versionEnvVar: SemVer
 
