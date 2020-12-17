@@ -7,7 +7,7 @@
     <PackageIcon>logo.png</PackageIcon>
     <Company>Trifenix</Company>
     <Product>trifenix.connect.aad.auth</Product>
-    <PackageTags>https://github.com/trifenix/connect-azr-auth/</PackageTags>
+    <PackageTags>lowcode search devops</PackageTags>
     <RootNamespace>trifenix</RootNamespace>
     <RepositoryUrl>https://github.com/trifenix/connect-azr-auth/</RepositoryUrl> 
     <nugetUrl>https://www.nuget.org/packages/connect-azr-auth/</nugetUrl>
