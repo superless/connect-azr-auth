@@ -35,7 +35,7 @@ steps:
     command: 'build'
     projects: '**/*.csproj'
   displayName: "build solution"
-  - task: SonarQubeAnalyze@4
+- task: SonarQubeAnalyze@4
 - task: SonarQubePublish@4
   inputs:
     pollingTimeoutSec: '300'
