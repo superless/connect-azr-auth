@@ -16,12 +16,13 @@ variables:
   folder: ""
 
 steps:
-  - task: SonarQubePrepare@4
-    inputs:
-      SonarQube: 'AGROFENIX-ConnectAzureAuth'
-      scannerMode: 'MSBuild'
-      projectKey: 'AGROFENIX-ConnectAzureAuth'
-      projectName: 'AGROFENIX-ConnectAzureAuth'
+- task: SonarQubePrepare@4
+  inputs:
+    SonarQube: 'AGROFENIX-ConnectAzureAuth'
+    scannerMode: 'MSBuild'
+    projectKey: 'AGROFENIX-ConnectAzureAuth'
+    projectName: 'AGROFENIX-ConnectAzureAuth'
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
@@ -35,9 +36,9 @@ steps:
     projects: '**/*.csproj'
   displayName: "build solution"
   - task: SonarQubeAnalyze@4
-  - task: SonarQubePublish@4
-    inputs:
-      pollingTimeoutSec: '300'
+- task: SonarQubePublish@4
+  inputs:
+    pollingTimeoutSec: '300'
 
 - script: |      
     sudo apt install -y unzip
